@@ -1,0 +1,103 @@
+/************ Variables/Globals/Mixins **************/
+@import './variables';
+@import './global';
+
+/*********** Components ***************/
+@import './header';
+@import './dashboard';
+@import './workout';
+
+
+.table {
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  position:  relative;
+}
+
+.controls {
+  position: absolute;
+}
+
+.card_container {
+  width: 800px;
+}
+
+.cards_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 300px;
+  height: 450px;
+  background: white;
+  border-radius: 5px;
+  margin:auto;
+}
+
+.card p {
+  font-size: 38px;
+  width: 50px;
+  color: black;
+}
+
+.card_top, .card_bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.card_top img, .card_bottom img {
+  width: 50px;
+}
+
+.card_top {
+  align-items: flex-start;
+}
+
+img {
+  width: 98%;
+}
+
+.card_middle {
+  width: 80%;
+  height: 70%;
+  margin: auto;
+}
+
+.card_bottom {
+  align-items: flex-end;
+}
+
+.card_bottom img, .card_bottom p {
+  transform: rotate(180deg)
+}
+
+.error_box {
+  position: flex;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0, .65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div {
+    width: 90%;
+    margin: auto;
+    height: 65vh;
+    background: $secondary;
+  }
+  p {color: white;}
+}
+

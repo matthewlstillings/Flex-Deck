@@ -1,0 +1,36 @@
+.title_wrapper {
+    align-items: center;
+    animation: titleMove 1s ease-out 1s forwards ;
+    background: $secondary;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    transform: translate(0, 0);
+    top: 0;
+    width: 100%;
+    h1, p {
+    color: white;
+    }
+}
+nav {
+    display: none;
+    a {
+        flex: 1;
+        text-align: center;
+        padding: 2em;
+    }
+}
+
+
+/************* Animations ****************/
+@keyframes titleMove {
+    0% {
+        transform: translate(0, 0)
+    }
+    100% {
+        transform: translate(0, -100%)
+    }
+}

@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    color: white;
+    font-family: $primaryFont;
+    font-size: 16px;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    max-height: 100vh;
+    background: $primary;
+}
+
+a, li {
+    text-decoration: none;
+    display: inline-block;
+}
+
+h1 {
+    font-size: $large;
+    text-transform: uppercase;
+    font-weight: 500;   
+}
+
+h2, h3, h4 {
+    font-size: $medium;
+}
+
+p {
+    font-size: $small;
+    color: white;
+}
+
+button, .button {
+    border: none;
+    border-radius: 40px;
+    box-shadow: none;
+    background: $secondary;
+    color: $primary;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 1em;
+}
+
+/******** Reusable Styles ***********/
+
+.page_title {
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 1.2em;
+    span {
+        color: $secondary;
+        font-size: inherit;
+    }
+}
+
+.section_title {
+    font-size: 1.5em;
+}
+
+.subtitle {
+    font-size: 1.1em;
+}
+
+.content {
+     padding: 2em 1.5em 1.5em 1.5em;
+}
+
+.info_box {
+    background: white;
+    width: 100%;
+    margin: 1.3em auto;
+    border-radius: 5px;
+    padding: 1em;
+    height: 243px;
+    overflow-Y: scroll; 
+    .info_box_title {
+        color: $primary;
+        font-size: 1.8em;
+        line-height: 1em;
+        margin-bottom: .7em;
+    }
+    p {
+        color: $primary;
+    }
+    .button {
+        padding: .5em 1em;
+        p {
+            font-size: .5em;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+        }
+    }
+}
+.preview_exercise {
+    align-items: center;
+    border-bottom: 1px solid $secondary;
+    display: flex;
+    justify-content: space-between;
+    height: 53px;
+    img {
+        height: 100%;
+        width: 12%;
+    }
+    p {
+        text-transform: capitalize;
+    }
+}
