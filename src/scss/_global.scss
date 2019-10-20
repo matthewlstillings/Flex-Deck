@@ -14,12 +14,16 @@ body {
     max-height: 100vh;
     background: $primary;
 }
-
+img {
+    width: 98%;
+}
 a, li {
     text-decoration: none;
     display: inline-block;
 }
-
+.disabled-link {
+    pointer-events: none;
+  }
 h1 {
     font-size: $large;
     text-transform: uppercase;
@@ -37,17 +41,39 @@ p {
 
 button, .button {
     border: none;
-    border-radius: 40px;
+    border-radius: 20px;
     box-shadow: none;
     background: $secondary;
     color: $primary;
-    font-size: 1.5em;
+    
     font-weight: 600;
     padding: 1em;
 }
-
+.button--lrg {
+    font-size: 1.1em;
+    letter-spacing: .12em;
+    padding: 1em 1.5em;
+    
+}
+.button--info {
+    font-size: 1.5em;
+}
+input[type="text"] {
+    -webkit-appearance: none;
+    border: none;
+    border-bottom: 1px solid black;
+    box-shadow: none;
+    color: $primary;
+    font-size: 1.1em;
+    margin-bottom: .5em;
+    width: 100%;
+    padding: .5em 1em .3em 0;
+}
+option {
+    color: black;
+    border-bottom: 1px solid black;
+}
 /******** Reusable Styles ***********/
-
 .page_title {
     font-size: 2em;
     font-weight: 600;
@@ -57,19 +83,15 @@ button, .button {
         font-size: inherit;
     }
 }
-
 .section_title {
     font-size: 1.5em;
 }
-
 .subtitle {
     font-size: 1.1em;
 }
-
 .content {
      padding: 2em 1.5em 1.5em 1.5em;
 }
-
 .info_box {
     background: white;
     width: 100%;
@@ -80,7 +102,7 @@ button, .button {
     overflow-Y: scroll; 
     .info_box_title {
         color: $primary;
-        font-size: 1.8em;
+        font-size: 1.2em;
         line-height: 1em;
         margin-bottom: .7em;
     }
@@ -97,6 +119,12 @@ button, .button {
         }
     }
 }
+.info_box.info_box--small {
+    height: auto;
+}
+.info_box.info_box--medium {
+    height: 275px;
+}
 .preview_exercise {
     align-items: center;
     border-bottom: 1px solid $secondary;
@@ -111,3 +139,23 @@ button, .button {
         text-transform: capitalize;
     }
 }
+.error_box {
+    position: flex;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0, .65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      width: 90%;
+      margin: auto;
+      height: 65vh;
+      background: $secondary;
+    }
+    p {color: white;}
+  }
+  

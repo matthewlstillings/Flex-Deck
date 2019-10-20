@@ -26,7 +26,10 @@ export default (props) => {
             let formattedMS = '0' + mSeconds;
             props.setUserData({
               ...props.userData,
-              time:  `${formattedMinutes}:${formattedSeconds}:${formattedMS}`
+              previousWorkout: {
+                ...props.userData.previousWorkout,
+                time:  `${formattedMinutes}:${formattedSeconds}:${formattedMS}`
+              } 
             })
           }, 100);
         } else if (!isActive && mSeconds !== 0) {
@@ -35,7 +38,7 @@ export default (props) => {
         return () => clearInterval(interval);
       }, [isActive, mSeconds]);
     return (
-        <div>
+        <div class="timer">
             <p>{minutes < 10 ? ('0'+minutes):minutes}:{seconds < 10 ? ('0'+seconds):seconds}:0{mSeconds}</p>
         </div>
     )

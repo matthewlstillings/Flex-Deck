@@ -8,6 +8,7 @@ export default (props) => {
     const [activeWorkout, setActiveWorkout] = useState(props.activeWorkout ? props.activeWorkout : 'Please choose a routine');
     const [count, setCount] = useState(props.activeWorkout ? (Math.floor(Math.random() *  activeWorkout.length)) : null);
     const [userData, setUserData] = useState({
+        ...user,
         totalWorkouts: user.totalWorkouts + 1,
         totalReps: user.totalReps + activeWorkout.map((exercise)=>exercise.reps).reduce((a, b)=>a + b, 0),
         previousWorkout: {
@@ -20,7 +21,6 @@ export default (props) => {
         setTimeout(()=> {
             localStorage.setItem('user', JSON.stringify(userData))
         },1000)
-        console.log(userData);
     }
     const nextCard = () => {  
        const workoutCopy = activeWorkout.slice();

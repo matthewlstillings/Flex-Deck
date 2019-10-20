@@ -5,15 +5,15 @@ export default (props) => {
         <div className={('card ') +  props.suit}>
             <div className="card_top">
                 <img src={`../images/${props.suit}.svg`} alt={props.suit}/>
+                <p>{props.reps}</p>
             </div>
             <div className="card_middle">
                 <p>{props.name}</p>
-                <p>{props.reps}</p>
-                <input type="button" value="Next" onClick={() => props.next()}/>
+                <button type="button" onClick={() => props.next()}>Next</button>
             </div>
             <div className="card_bottom">
-                <img src={`../images/${props.suit}.svg`} alt={props.suit}/>
                 <p>{props.reps}</p>
+                <img src={`../images/${props.suit}.svg`} alt={props.suit}/>
             </div>
         </div>
     )

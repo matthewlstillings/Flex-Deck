@@ -9,10 +9,16 @@
         color: $primary;
         font-size: 1.2em;
         margin-bottom: .5em;
-        padding: .5em 1em .3em 0;
+        height: 46px;
+        padding: .5em 1em .5em .5em;
+        -webkit-appearance: none;
     }
     .workout_premade {
-        margin-bottom: 2em;
+        margin-bottom: 1em;
+        width: 100%;
+    }
+    .btn--premade {
+        margin-bottom: 1em;
     }
     .workout_custom_container {
         .section_title {
@@ -27,7 +33,7 @@
         }
         button {
             font-size: 1em;
-            margin-top: 1em;
+            margin-top: .5em;
             padding: 1em;   
         }
     }
@@ -36,5 +42,8 @@
     }
     .preview_exercise:nth-child(1) {
         border-top: 1px solid $secondary;
+    }
+    .subtitle {
+        margin-bottom: 1em;
     }
 }

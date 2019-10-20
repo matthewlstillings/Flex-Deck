@@ -1,13 +1,22 @@
 #landing {
-    
-   
+    .dashboard_title {
+        font-size: 1.6em;
+        span {
+            color: $secondary;
+            font-size: inherit;
+        }
+    }
     .stat{
         font-size: 1.5em;
     }
     .start_button {
         display: block;
         margin: auto;
+        margin-left: 0;
         cursor: pointer;
+        font-size: 1.1em;
+        letter-spacing: .12em;
+        padding: 1em 1.5em;
     }
     .start_button:disabled {
         opacity: .5;
