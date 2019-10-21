@@ -58,7 +58,7 @@ button, .button {
 .button--info {
     font-size: 1.5em;
 }
-input[type="text"] {
+input[type="text"], input[type="number"] {
     -webkit-appearance: none;
     border: none;
     border-bottom: 1px solid black;

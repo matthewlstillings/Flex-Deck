@@ -44,7 +44,7 @@ const Workouts = (props) => {
         } else {
             setCustomWorkout(customWorkout=>[
                 ...customWorkout,
-                {...exercise, completed: 0}   
+                {...exercise, completed: 0, reps: 0}   
             ])
             setCustomExercise({
                 name: '',
@@ -85,7 +85,7 @@ const Workouts = (props) => {
                 <RoutineList currentWorkout={customWorkout}/>
                 <form class="workout_custom-form info_box" onSubmit={pushExercise}>
                     <input type="text" value={exercise.name} placeholder="Exercise" onChange={setName}/>
-                    <input type="text" value={exercise.sets} name="sets" onChange={setSets} placeholder="Number of Sets" />
+                    <input type="number" value={exercise.sets} name="sets" onChange={setSets} placeholder="Number of Sets" />
                     <select value={exercise.muscles} name="group" onChange={setGroup}>
                         <option value="">Muscle Group</option>
                         <option value="arms">Arms</option>

@@ -6,23 +6,12 @@ import RoutineList from './RoutineList';
 
 export default () => {
     const {setIsActive, isActive, user, currentWorkout, setError, updateUser} = useContext(WorkoutContext);
-    const [activeWorkout, setActiveWorkout] = useState([])
     const startRoutine = () => {
-        setRoutine();
         toggle();
     }
     const toggle = () => {
         setIsActive(!isActive);
     }
-    const setRoutine = () => {
-        const routine = currentWorkout.map((exercise) => {
-            return {
-                ...exercise,
-                reps: Math.floor(Math.random() * 15) + 5
-            };
-        });
-        setActiveWorkout(routine);
-    };
     const throwError = (e) => {
         e.preventDefault();
         setError('Please enter your name')
@@ -42,7 +31,7 @@ export default () => {
     return (
         <div id="landing">
                 {
-                   isActive ? <ActiveWorkout activeWorkout={activeWorkout} /> : (
+                   isActive ? <ActiveWorkout /> : (
                        <div className="content">
                                 {
                                     user.totalWorkouts > 0 ? (
