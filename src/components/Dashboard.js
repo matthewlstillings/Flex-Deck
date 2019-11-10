@@ -46,7 +46,7 @@ export default () => {
                                         </div>
                                     ) : (
                                         <div>
-                                            <p className="dashboard_title">Welcome to <span>Flex Deck</span></p>
+                                            <p className="dashboard_title page_title">Welcome to <span>Flex Deck</span></p>
                                             <div className="info_box info_box--small  info_box--intro">
                                                 <p className="stat">Flex Deck is a deck of cards workout that will help you workout anytime, anywhere. Each card is a different exercise and a random number of reps. </p>
                                             </div>
