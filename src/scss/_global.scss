@@ -105,7 +105,6 @@ option {
     border-radius: 5px;
     padding: 1em;
     height: 243px;
-    overflow-Y: scroll; 
     .info_box_title {
         color: $primary;
         font-size: 1.2em;
@@ -130,6 +129,14 @@ option {
 }
 .info_box.info_box--medium {
     height: 275px;
+}
+.info_box--workout {
+    overflow-Y: scroll ;
+    padding: 0 .5em;
+
+}
+.info_box--workout::-webkit-scrollbar {
+    background: transparent;
 }
 .preview_exercise {
     align-items: center;
