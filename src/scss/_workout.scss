@@ -1,6 +1,14 @@
 #workout {
+    .page_title {
+        padding: 2em 1em 0em .9em;;
+        max-width: 1000px;
+        margin: auto;
+    }
     .page_title, .section_title {
         margin-bottom: 1em;
+    }
+    .content {
+        padding-top: 0;
     }
     input[type="text"], input[type="number"], select {
         border: none;

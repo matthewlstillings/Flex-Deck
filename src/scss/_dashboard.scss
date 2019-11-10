@@ -1,6 +1,5 @@
 #landing {
     .dashboard_title {
-        font-size: 1.6em;
         span {
             color: $secondary;
             font-size: inherit;
@@ -10,7 +9,6 @@
         font-size: 1.5em;
     }
     .start_button {
-        display: block;
         margin: auto;
         margin-left: 0;
         cursor: pointer;
@@ -27,6 +25,21 @@
         }
         p {
             font-size: 1.2em;
+        }
+    }
+    .info_box--workout {
+        padding: 0 1em 0 .5em;
+    }
+}
+
+@media (min-width: 695px) {
+    #landing {
+        .content {
+            > div:nth-child(1) {
+                .info_box {
+                    height: 150px;
+                  }
+            }
         }
     }
 }

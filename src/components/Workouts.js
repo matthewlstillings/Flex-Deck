@@ -67,45 +67,48 @@ const Workouts = (props) => {
     }
     return (
         <div id="workout">
+            <p className="page_title">Set your <span>Flex Deck</span> Routine</p>
             <div className="content">
-                <p className="page_title">Set your <span>Flex Deck</span> Routine</p>
-                <p className="section_title">Choose one of the premade routines</p>
-                <select className="workout_premade" onChange={changeWorkout}>
-                    <option value="">Choose</option>
-                    <option value="fullbody">Full Body</option>
-                    <option value="arms">Arms & Shoulders</option>
-                    <option value="chest">Chest & Back</option>
-                    <option value="legs">Legs</option>
-                    <option value="core">Core</option>
-                </select>
-                {preMadeWorkout.length > 0 && <button class="btn--premade" onClick={changeToPreMadeRoutine}>Finish Custom Routine</button>}
-                <div class="workout_custom_container">
-                <p className="section_title">Build your own!</p>
-                <p className="subtitle">Add exercises below. </p>
-                <RoutineList currentWorkout={customWorkout}/>
-                <form class="workout_custom-form info_box" onSubmit={pushExercise}>
-                    <input type="text" value={exercise.name} placeholder="Exercise" onChange={setName}/>
-                    <input type="number" value={exercise.sets} name="sets" onChange={setSets} placeholder="Number of Sets" />
-                    <select value={exercise.muscles} name="group" onChange={setGroup}>
-                        <option value="">Muscle Group</option>
-                        <option value="arms">Arms</option>
-                        <option value="back">Back</option>
-                        <option value="chest">Chest</option>
-                        <option value="core">Core</option>
+                <div>
+                    <p className="section_title">Choose one of the premade routines</p>
+                    <select className="workout_premade" onChange={changeWorkout}>
+                        <option value="">Choose</option>
+                        <option value="fullbody">Full Body</option>
+                        <option value="arms">Arms & Shoulders</option>
+                        <option value="chest">Chest & Back</option>
                         <option value="legs">Legs</option>
-                        <option value="shoulders">Shoulders</option>
+                        <option value="core">Core</option>
                     </select>
-                    <select value={exercise.suit} name="suit" onChange={setSuit}>
-                        <option value="">Suit</option>
-                        <option value="clubs">Clubs</option>
-                        <option value="diamonds">Diamonds</option>
-                        <option value="hearts">Hearts</option>
-                        <option value="spades">Spades</option>
-                    </select>
-                    <button type="submit">Add</button>
-                </form>
+                    {preMadeWorkout.length > 0 && <button class="btn--premade" onClick={changeToPreMadeRoutine}>Set Routine</button>}
                 </div>
-                {customWorkout.length > 0 && <button onClick={changeToCustomRoutine}>Finish Custom Routine</button>}
+                <div class="workout_custom_container">
+                    <p className="section_title">Build your own!</p>
+                    <p className="subtitle">Add exercises below. </p>
+                    <RoutineList currentWorkout={customWorkout}/>
+                    <form class="workout_custom-form info_box" onSubmit={pushExercise}>
+                        <input type="text" value={exercise.name} placeholder="Exercise" onChange={setName}/>
+                        <input type="number" value={exercise.sets} name="sets" onChange={setSets} placeholder="Number of Sets" />
+                        <select value={exercise.muscles} name="group" onChange={setGroup}>
+                            <option value="">Muscle Group</option>
+                            <option value="arms">Arms</option>
+                            <option value="back">Back</option>
+                            <option value="chest">Chest</option>
+                            <option value="core">Core</option>
+                            <option value="legs">Legs</option>
+                            <option value="shoulders">Shoulders</option>
+                        </select>
+                        <select value={exercise.suit} name="suit" onChange={setSuit}>
+                            <option value="">Suit</option>
+                            <option value="clubs">Clubs</option>
+                            <option value="diamonds">Diamonds</option>
+                            <option value="hearts">Hearts</option>
+                            <option value="spades">Spades</option>
+                        </select>
+                        <button type="submit">Add</button>
+                    </form>
+                    {customWorkout.length > 0 && <button onClick={changeToCustomRoutine}>Finish Custom Routine</button>}
+                </div>
+                
                 {
                 //<button onClick={()=>{console.log(customWorkout, preMadeWorkout)}}>CLICK</button>
                 }
