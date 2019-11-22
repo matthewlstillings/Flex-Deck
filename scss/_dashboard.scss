@@ -1,0 +1,46 @@
+#landing {
+  .dashboard_title {
+    span {
+      color: $secondary;
+      font-size: inherit;
+    }
+  }
+  .stat {
+    font-size: 1.5em;
+  }
+  .start_button {
+    margin: auto;
+    margin-left: 0;
+    cursor: pointer;
+    font-size: 1.1em;
+    letter-spacing: 0.12em;
+    padding: 1em 1.5em;
+  }
+  .start_button:disabled {
+    opacity: 0.5;
+  }
+  .info_box--intro {
+    p:nth-child(1) {
+      margin-bottom: 1em;
+    }
+    p {
+      font-size: 1.2em;
+    }
+  }
+}
+
+@media (min-width: 695px) {
+  #landing {
+    .content {
+      > div:nth-child(1) {
+        .info_box {
+          height: 150px;
+        }
+      }
+      .start_button {
+        margin-left: auto;
+        margin-top: 50px;
+      }
+    }
+  }
+}

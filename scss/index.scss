@@ -1,0 +1,32 @@
+/************ Variables/Globals/Mixins **************/
+@import './variables';
+@import './global';
+
+/*********** Components ***************/
+@import './header';
+@import './dashboard';
+@import './workout';
+@import './card';
+@import './active_workout';
+
+
+.table {
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  position:  relative;
+}
+
+.controls {
+  position: absolute;
+}
+
+
+
+
+
