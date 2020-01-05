@@ -10,8 +10,8 @@ After finding many lackluster card-based workout web apps this was developed not
 # Tech used
 
 Built with: 
-React (Create-react-app)
-React hooks
-SCSS
-Node (v10.15.3)
+  - React (Create-react-app)
+  - React hooks
+  - SCSS
+  - Node (v10.15.3)
 
